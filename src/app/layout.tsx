@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "./components/Navigation";
+import Navigation from "@/components/Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Your Website",
-  description: "A modern website built with Next.js",
+  title: "Your Name - Portfolio & Blog",
+  description: "Personal portfolio and technical blog showcasing my work and thoughts on software development.",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navigation />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
