@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+import { bg, text, shadow, tag, transition } from '@/utils/colors';
 
 const projects = [
   {
@@ -24,34 +26,35 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className={`min-h-screen ${bg.page} py-12 px-4 sm:px-6 lg:px-8`}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
+          <h1 className={`text-4xl font-bold ${text.primary} sm:text-5xl md:text-6xl`}>
             Projects
           </h1>
-          <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+          <p className={`mt-3 max-w-md mx-auto text-base ${text.secondary} sm:text-lg md:mt-5 md:text-xl md:max-w-3xl`}>
             A showcase of my recent work and personal projects
           </p>
         </div>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
-            <div key={project.id} className="bg-white rounded-lg shadow overflow-hidden">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-              />
+            <div key={project.id} className={`${bg.card} rounded-lg ${shadow.default} overflow-hidden`}>
+              <div className="relative w-full h-48">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
               <div className="p-6">
-                <h2 className="text-xl font-semibold text-gray-900">{project.title}</h2>
-                <p className="mt-2 text-gray-600">{project.description}</p>
+                <h3 className={`text-xl font-semibold ${text.primary}`}>{project.title}</h3>
+                <p className={`mt-2 ${text.secondary}`}>{project.description}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full"
-                    >
+                    <span key={tech} className={`px-2 py-1 text-sm rounded ${tag.default}`}>
                       {tech}
                     </span>
                   ))}
@@ -61,7 +64,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-indigo-600 hover:text-indigo-500"
+                    className={`${text.link} ${transition.default}`}
                   >
                     GitHub →
                   </a>
@@ -69,7 +72,7 @@ export default function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-indigo-600 hover:text-indigo-500"
+                    className={`${text.link} ${transition.default}`}
                   >
                     Live Demo →
                   </a>
