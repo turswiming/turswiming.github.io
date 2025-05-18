@@ -13,7 +13,7 @@ export default function Home() {
           <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
             Full Stack Developer | Tech Enthusiast | Problem Solver
           </p>
-          <p>
+          <p className='mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl'>
             for now this is a mockup of my website. I will replace it with my real experience soon.
           </p>
         </div>
