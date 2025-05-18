@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const products = [
   {
@@ -42,9 +43,11 @@ export default function Products() {
             {products.map((product) => (
               <div key={product.id} className="group relative">
                 <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75">
-                  <img
+                  <Image
                     src={product.image}
                     alt={product.name}
+                    width={300}
+                    height={300}
                     className="w-full h-full object-center object-cover"
                   />
                 </div>
