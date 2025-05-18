@@ -9,7 +9,7 @@ export default function Contact() {
             Contact Us
           </h1>
           <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            Get in touch with our team. We'd love to hear from you.
+            Get in touch with our team. We&apos;d love to hear from you.
           </p>
         </div>
 

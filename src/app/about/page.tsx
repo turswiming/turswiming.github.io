@@ -19,13 +19,13 @@ export default function About() {
             <p>
               We are a dedicated team passionate about creating amazing experiences
               for our users. Our journey began with a simple idea and has grown
-              into something we're truly proud of.
+              into something we&apos;re truly proud of.
             </p>
             
             <h2>Our Mission</h2>
             <p>
               To provide innovative solutions that make a positive impact on
-              people's lives through technology and creativity.
+              people&apos;s lives through technology and creativity.
             </p>
             
             <h2>Our Team</h2>
